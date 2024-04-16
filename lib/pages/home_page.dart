@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:third_app/widgets/small_container.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -62,85 +63,19 @@ class HomePage extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 180,
-                  decoration: BoxDecoration(
-                      color: const Color(0xff795458),
-                      boxShadow: const [
-                        BoxShadow(
-                          spreadRadius: 5,
-                          color: Color(0xffC08B5C),
-                          blurRadius: 7,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(20)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "open-source",
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Color(0xffB99470),
-                              fontWeight: FontWeight.w800),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Flutter is an open-source UI (User Interface) software development kit created by Google.",
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        )
-                      ],
-                    ),
-                  ),
+                SmallContainer(
+                  title: "open-source",
+                  description:
+                      "Flutter is an open-source UI (User Interface) software development kit created by Google.",
                 ),
-                Container(
-                  width: 180,
-                  decoration: BoxDecoration(
-                      color: const Color(0xff795458),
-                      boxShadow: const [
-                        BoxShadow(
-                          spreadRadius: 5,
-                          color: Color(0xffC08B5C),
-                          blurRadius: 7,
-                        )
-                      ],
-                      borderRadius: BorderRadius.circular(20)),
-                  child: const Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Widget Tree",
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Color(0xffB99470),
-                              fontWeight: FontWeight.w800),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Flutter is an open-source UI (User Interface) software development kit created by Google.",
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
+                SmallContainer(
+                  title: "Widget Tree",
+                  description:
+                      "Flutter is an open-source UI (User Interface) software development kit created by Google.",
+                )
               ],
             )
           ],
